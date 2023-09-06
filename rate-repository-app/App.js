@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Azul fellawen</Text>
+      <Text>Azul fellawen Tamazgha</Text>
       <StatusBar style="auto" />
     </View>
   );
