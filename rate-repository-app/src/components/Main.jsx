@@ -1,5 +1,5 @@
 import Constants from 'expo-constants';
-import { Text, StyleSheet, View, Pressable } from 'react-native';
+import { Text, StyleSheet, View } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -13,11 +13,7 @@ const Main = () => {
   return (
     <View style={styles.container}>
       <Text>Rate Repository Application</Text>
-      <Pressable
-      onPress={() => console.log('You pressed the text!')}
-    >
-      <Text>You can press me</Text>
-    </Pressable>
+     
     </View>
   );
 };
