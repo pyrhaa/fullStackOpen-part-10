@@ -1,14 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-//import Main from './src/components/Main';
-import Test from './src/components/Test';
+import Main from './src/components/Main';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Azul!</Text>
+      <Text>Rate Repository Application</Text>
       <StatusBar style="auto" />
-      <Test />
+      <Main />
     </View>
   );
 }
