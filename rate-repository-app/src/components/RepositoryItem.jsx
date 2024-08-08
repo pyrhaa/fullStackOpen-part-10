@@ -75,7 +75,7 @@ const RepositoryItem = ({ repository }) => {
           </Text>
           <Text color="textSecondary">{repository.description}</Text>
           <View style={styles.informationLanguage}>
-            <Text color="light">{repository.language}</Text>
+            <Text color='textThird'>{repository.language}</Text>
           </View>
         </View>
       </View>
