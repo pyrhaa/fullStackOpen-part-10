@@ -1,14 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import Main from './src/components/Main';
 import { StyleSheet, Text, View } from 'react-native';
+import { NativeRouter } from 'react-router-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Rate Repository Application</Text>
+    <NativeRouter>
+      <View style={styles.container}>
       <StatusBar style="auto" />
       <Main />
     </View>
+    </NativeRouter>
+    
   );
 }
 
