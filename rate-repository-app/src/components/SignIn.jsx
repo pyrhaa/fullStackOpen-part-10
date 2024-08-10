@@ -1,5 +1,6 @@
 import { Text, TextInput, Pressable, View, StyleSheet } from 'react-native';
 import { useFormik } from 'formik';
+import * as yup from 'yup';
 import theme from '../theme'
 
 const styles = StyleSheet.create({
@@ -32,10 +33,15 @@ const initialValues = {
   password: '',
 };
 
+// const validationSchema = yup.object().shape({
+ 
+// });
+
 const SignInForm = ({onSubmit}) => {
 
   const formik = useFormik({
       initialValues,
+      // validationSchema,
       onSubmit,
     });
 
