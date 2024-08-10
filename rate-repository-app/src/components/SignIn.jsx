@@ -49,6 +49,7 @@ const SignInForm = ({onSubmit}) => {
         onChangeText={formik.handleChange('username')}
       />
       <TextInput
+        secureTextEntry={true}
         style={styles.textInput}
         placeholder="Password"
         value={formik.values.password}
