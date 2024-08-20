@@ -33,15 +33,16 @@ const initialValues = {
   password: '',
 };
 
-// const validationSchema = yup.object().shape({
- 
-// });
+const validationSchema = yup.object().shape({
+  username: yup.string().required('Username is required'),
+  password: yup.string().required('Password is required'),
+});
 
 const SignInForm = ({onSubmit}) => {
 
   const formik = useFormik({
       initialValues,
-      // validationSchema,
+      validationSchema,
       onSubmit,
     });
 
@@ -54,6 +55,9 @@ const SignInForm = ({onSubmit}) => {
         value={formik.values.username}
         onChangeText={formik.handleChange('username')}
       />
+      {formik.touched.username && formik.errors.username && (
+  <Text style={{ color: '#d73a4a' }}>{formik.errors.username}</Text>
+ )}
       <TextInput
         secureTextEntry={true}
         style={styles.textInput}
@@ -61,6 +65,9 @@ const SignInForm = ({onSubmit}) => {
         value={formik.values.password}
         onChangeText={formik.handleChange('password')}
       />
+      {formik.touched.password && formik.errors.password && (
+  <Text style={{ color: '#d73a4a' }}>{formik.errors.password}</Text>
+ )}
       <Pressable style={styles.signButton} onPress={formik.handleSubmit}>
         <Text style={styles.textColor}>Sign in</Text>
       </Pressable>
